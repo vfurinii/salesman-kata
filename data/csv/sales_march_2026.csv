@@ -1,0 +1,14 @@
+sale_id,product_type,product_name,amount,salesperson_id,salesperson_name,country,city,warehouse,retailer,sale_date
+SALE-CSV-001,CELL_PHONE,iPhone 14,899.99,SP-007,Emma Johnson,Canada,Toronto,WH-TO-01,Best Buy Toronto,2026-03-01 09:00:00
+SALE-CSV-002,COMPUTER,Lenovo ThinkPad,1299.99,SP-008,Roberto Santos,Mexico,Mexico City,WH-MX-01,Liverpool CDMX,2026-03-01 11:30:00
+SALE-CSV-003,ACCESSORY,Wireless Keyboard,89.99,SP-009,Sophie Martin,France,Lyon,WH-LY-01,Fnac Lyon,2026-03-02 14:15:00
+SALE-CSV-004,CELL_PHONE,Samsung Galaxy A54,499.99,SP-010,Luigi Rossi,Italy,Rome,WH-RM-01,MediaWorld Roma,2026-03-02 16:45:00
+SALE-CSV-005,COMPUTER,ASUS ROG,1999.99,SP-011,Hans Schmidt,Germany,Munich,WH-MU-01,Saturn Munich,2026-03-03 10:20:00
+SALE-CSV-006,ACCESSORY,External SSD 1TB,159.99,SP-007,Emma Johnson,Canada,Vancouver,WH-VC-01,Best Buy Vancouver,2026-03-03 13:30:00
+SALE-CSV-007,CELL_PHONE,OnePlus 11,649.99,SP-012,Wei Chen,China,Shanghai,WH-SH-01,JD.com Shanghai,2026-03-04 09:45:00
+SALE-CSV-008,COMPUTER,Acer Aspire,799.99,SP-013,Kate Wilson,UK,London,WH-LD-01,Currys London,2026-03-04 15:00:00
+SALE-CSV-009,ACCESSORY,Webcam HD,99.99,SP-008,Roberto Santos,Mexico,Guadalajara,WH-GD-01,Liverpool GDL,2026-03-05 11:00:00
+SALE-CSV-010,CELL_PHONE,Xiaomi 13,599.99,SP-014,Raj Patel,India,Mumbai,WH-MB-01,Croma Mumbai,2026-03-05 14:30:00
+SALE-CSV-011,COMPUTER,Microsoft Surface,1499.99,SP-015,Sarah Lee,Australia,Sydney,WH-SY-01,JB Hi-Fi Sydney,2026-03-06 10:15:00
+SALE-CSV-012,ACCESSORY,Monitor 27inch,349.99,SP-009,Sophie Martin,France,Paris,WH-PR-01,Fnac Paris,2026-03-06 12:00:00
+
