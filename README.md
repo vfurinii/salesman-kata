@@ -141,11 +141,12 @@ salesman-kata-v3/
 ### Step 1: Start Infrastructure
 
 ```bash
-# Start PostgreSQL and Kafka
-docker-compose up -d
+# Use the startup script (recommended)
+./start-infrastructure.sh
 
-# Verify services are running
-docker-compose ps
+# Or manually
+docker-compose up -d
+sleep 30  # Wait for initialization
 ```
 
 This will start:
@@ -154,6 +155,8 @@ This will start:
 - Zookeeper on `localhost:2181`
 - Kafka UI on `localhost:8090`
 - pgAdmin on `localhost:5050`
+
+**Having issues?** See [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
 
 ### Step 2: Build the Application
 

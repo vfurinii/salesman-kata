@@ -8,11 +8,14 @@
 # Clone or navigate to project
 cd salesman-kata-v3
 
-# Start PostgreSQL and Kafka
-docker-compose up -d
+# Option A: Use the startup script (recommended)
+./start-infrastructure.sh
 
-# Wait for services to be healthy
-docker-compose ps
+# Option B: Manual start
+docker-compose down -v  # Clean start
+docker-compose up -d    # Start services
+sleep 30                # Wait for initialization
+docker-compose ps       # Check status
 ```
 
 You should see all services with status "Up":
@@ -21,6 +24,12 @@ You should see all services with status "Up":
 - salesman-zookeeper
 - salesman-kafka-ui
 - salesman-pgadmin
+
+**Verify PostgreSQL is ready:**
+```bash
+docker exec salesman-postgres pg_isready -U postgres -d salesdb
+# Should output: /var/run/postgresql:5432 - accepting connections
+```
 
 ### Step 2: Build Application (1 minute)
 
@@ -39,7 +48,7 @@ mvn spring-boot:run
 Wait for log message:
 ```
 Started Main in X.XXX seconds
-```
+```./start-infrastructure.sh
 
 ### Step 4: Test the Pipeline (1 minute)
 
@@ -265,6 +274,32 @@ echo "=== Verification Complete ==="
 ---
 
 ## 🐛 Troubleshooting
+
+### Problem: "FATAL: role 'postgres' does not exist"
+
+This means PostgreSQL didn't initialize properly.
+
+**Solution:**
+```bash
+# Complete reset
+docker-compose down -v
+docker volume prune -f
+
+# Restart with clean state
+docker-compose up -d
+
+# Wait for initialization (important!)
+sleep 30
+
+# Verify
+docker exec salesman-postgres pg_isready -U postgres -d salesdb
+docker exec salesman-postgres psql -U postgres -d salesdb -c "SELECT 1;"
+```
+
+**Or use the startup script:**
+```bash
+./start-infrastructure.sh
+```
 
 ### Problem: Port already in use
 
